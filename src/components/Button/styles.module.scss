@@ -1,0 +1,30 @@
+@import "../../scss/mixins.scss";
+.button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--button-background);
+	width: 24px;
+	height: 24px;
+	border-radius: 2px;
+	cursor: pointer;
+	border: none;
+
+	&.active {
+		.button__icon {
+			stroke: var(--white);
+		}
+	}
+
+	&__icon {
+		stroke: var(--svg-stroke);
+		@include transition;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				stroke: var(--white);
+			}
+		}
+	}
+}

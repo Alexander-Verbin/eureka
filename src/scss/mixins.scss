@@ -1,0 +1,17 @@
+@use "sass:math";
+/* Стандартный transition */
+@mixin transition {
+	transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	-webkit-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	-moz-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	-o-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+	-ms-transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+//Перевод пикселей в емы
+@function px-to-em($px, $context: 16) {
+	@return math.div($px, $context) * 1em;
+}
+//Перевод пикслей в проценты для line-height
+@function px-to-per($lh, $fs) {
+	@return math.div($lh, $fs) * 100%;
+}

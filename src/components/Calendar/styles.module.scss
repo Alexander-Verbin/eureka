@@ -1,0 +1,178 @@
+@import "../../scss/mixins.scss";
+.wrapper {
+	position: relative;
+}
+.calendar {
+	width: 184px;
+	border-radius: 4px;
+	background: var(--button-background);
+	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+	&__header {
+		border-radius: 5px 5px 0 0;
+		background-color: var(--background-color-calendar-header);
+		color: var(--color-text);
+		padding: 10px 10px 5px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__header__text {
+		color: var(--white);
+		font-size: px-to-em(10);
+		line-height: 125%;
+		letter-spacing: 0.04px;
+		text-transform: capitalize;
+		@include transition;
+		cursor: pointer;
+
+		&.year {
+			cursor: not-allowed;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: var(--blue);
+				&.year {
+					color: var(--white);
+				}
+			}
+		}
+	}
+
+	&__header__arrows {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	&__header__arrow__icon {
+		fill: var(--white);
+		display: block;
+		@include transition;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				fill: var(--blue);
+			}
+		}
+	}
+
+	&__header__arrow {
+		cursor: pointer;
+	}
+
+	&__body {
+		border-radius: 0 0 5px 5px;
+		padding: 5px;
+	}
+
+	&__week__names {
+		height: 20px;
+		text-align: center;
+		align-items: center;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 1px 1px;
+	}
+
+	&__week__names__text {
+		color: var(--white);
+		font-size: px-to-em(8);
+		line-height: normal;
+		text-transform: capitalize;
+	}
+
+	&__days {
+		font-size: px-to-em(10);
+		color: var(--white);
+		text-align: center;
+		display: grid;
+		text-align: center;
+		align-items: center;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 1fr;
+		gap: 1px 1px;
+	}
+
+	&__day {
+		border-radius: 5px;
+		padding: 4px 0px;
+		cursor: pointer;
+		@include transition;
+		border: 1px solid transparent;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: var(--light-grey);
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__additional__day {
+		padding: 4px 0;
+		cursor: pointer;
+		color: var(--light-grey);
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: var(--light-grey);
+				color: var(--white);
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__pick__item {
+		color: var(--white);
+		padding: 10px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 5px;
+		font-size: px-to-em(10);
+		line-height: 125%;
+		letter-spacing: 0.04px;
+		@include transition;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: var(--light-grey);
+				color: var(--white);
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__today__item {
+		border: 1px solid var(--blue);
+	}
+
+	&__selected__item {
+		background-color: var(--blue);
+		color: var(--white);
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: var(--blue);
+			}
+		}
+	}
+
+	&__pick__items__container {
+		text-align: center;
+		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(3, 32px);
+		grid-template-rows: repeat(4, 32px);
+		padding: 0 5px;
+		gap: 1px 0;
+	}
+
+	&__unchoosable__year {
+		color: var(--light-grey);
+	}
+}

@@ -1,0 +1,70 @@
+@import "../../scss/mixins.scss";
+.popup {
+	padding: 10px 3px 0 10px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, z-index 0.3s, visibility 0s linear 0.3s;
+	z-index: -1;
+	border-radius: 4px;
+	background-color: var(--button-background);
+	overflow: hidden;
+	max-height: 129px;
+	position: absolute;
+	width: 100%;
+	bottom: calc(100% + 4px);
+	left: 0;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 3;
+		transition-delay: 0s;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__current__date {
+		font-size: px-to-em(10);
+		line-height: 125%;
+		letter-spacing: 0.04px;
+		color: var(--light-blue);
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		overflow-y: scroll;
+		height: 129px;
+		padding-right: 3px;
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 27px;
+			background-color: var(--blue);
+		}
+	}
+
+	&__today {
+		font-size: px-to-em(8);
+		line-height: normal;
+		color: var(--white);
+	}
+
+	&__image {
+		object-fit: contain;
+		min-height: 100%;
+		margin-bottom: 36px;
+	}
+}
