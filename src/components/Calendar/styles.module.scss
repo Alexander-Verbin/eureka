@@ -59,6 +59,10 @@
 
 	&__header__arrow {
 		cursor: pointer;
+
+		&:last-child {
+			transform: rotate(180deg);
+		}
 	}
 
 	&__body {

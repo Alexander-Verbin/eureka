@@ -3,6 +3,7 @@ import { checkDateIsEqual, checkIsToday } from "../../utils/date";
 import { useCalendar } from "../../utils/hooks/useCalendar";
 import styles from "./styles.module.scss";
 import { Popup } from "../Popup";
+import { ReactComponent as Arrow } from "../../images/arrow.svg";
 
 interface CalendarProps {
 	locale?: string;
@@ -67,34 +68,12 @@ export const Calendar: React.FC<CalendarProps> = ({
 						<div
 							className={styles.calendar__header__arrow}
 							onClick={() => functions.onClickArrow("left")}>
-							<svg
-								className={styles.calendar__header__arrow__icon}
-								xmlns='http://www.w3.org/2000/svg'
-								width='20'
-								height='20'
-								viewBox='0 0 20 20'>
-								<path
-									fillRule='evenodd'
-									clipRule='evenodd'
-									d='M9.97456 7.05806C10.2186 6.81398 10.6144 6.81398 10.8584 7.05806L15.8584 12.0581C16.1025 12.3021 16.1025 12.6979 15.8584 12.9419C15.6144 13.186 15.2186 13.186 14.9746 12.9419L10.4165 8.38388L5.85845 12.9419C5.61437 13.186 5.21864 13.186 4.97456 12.9419C4.73048 12.6979 4.73048 12.3021 4.97456 12.0581L9.97456 7.05806Z'
-								/>
-							</svg>
+							<Arrow className={styles.calendar__header__arrow__icon} />
 						</div>
 						<div
 							className={styles.calendar__header__arrow}
 							onClick={() => functions.onClickArrow("right")}>
-							<svg
-								className={styles.calendar__header__arrow__icon}
-								xmlns='http://www.w3.org/2000/svg'
-								width='20'
-								height='20'
-								viewBox='0 0 20 20'>
-								<path
-									fillRule='evenodd'
-									clipRule='evenodd'
-									d='M4.97456 7.05806C5.21864 6.81398 5.61437 6.81398 5.85845 7.05806L10.4165 11.6161L14.9746 7.05806C15.2186 6.81398 15.6144 6.81398 15.8584 7.05806C16.1025 7.30214 16.1025 7.69786 15.8584 7.94194L10.8584 12.9419C10.6144 13.186 10.2186 13.186 9.97456 12.9419L4.97456 7.94194C4.73048 7.69786 4.73048 7.30214 4.97456 7.05806Z'
-								/>
-							</svg>
+							<Arrow className={styles.calendar__header__arrow__icon} />
 						</div>
 					</div>
 				</div>
