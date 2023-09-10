@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eureka/static/css/main.373d8785.css",
-    "main.js": "/eureka/static/js/main.d4d8c4c5.js",
+    "main.js": "/eureka/static/js/main.fae6c931.js",
     "static/js/787.961e05a7.chunk.js": "/eureka/static/js/787.961e05a7.chunk.js",
     "static/media/Inter-Regular.eot": "/eureka/static/media/Inter-Regular.f5b04bf996cdaa04b4ea.eot",
     "static/media/Inter-Regular.ttf": "/eureka/static/media/Inter-Regular.991468dd4e43f260e6a4.ttf",
@@ -12,11 +12,11 @@
     "index.html": "/eureka/index.html",
     "static/media/arrow.svg": "/eureka/static/media/arrow.f50808b33593cfe0adc81272e6d9728a.svg",
     "main.373d8785.css.map": "/eureka/static/css/main.373d8785.css.map",
-    "main.d4d8c4c5.js.map": "/eureka/static/js/main.d4d8c4c5.js.map",
+    "main.fae6c931.js.map": "/eureka/static/js/main.fae6c931.js.map",
     "787.961e05a7.chunk.js.map": "/eureka/static/js/787.961e05a7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.373d8785.css",
-    "static/js/main.d4d8c4c5.js"
+    "static/js/main.fae6c931.js"
   ]
 }
