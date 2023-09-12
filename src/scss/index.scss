@@ -19,15 +19,14 @@
 		bottom: calc(100% + 4px);
 		right: calc(100% - 24px);
 		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s, z-index 0.3s, visibility 0s linear 0.3s;
 		z-index: -1;
 
+		@include hidden;
+
 		&.active {
-			opacity: 1;
-			visibility: visible;
-			z-index: 3;
-			transition-delay: 0s;
+			z-index: 2;
+
+			@include active;
 		}
 	}
 }

@@ -1,9 +1,6 @@
 @import "../../scss/mixins.scss";
 .popup {
 	padding: 10px 3px 0 10px;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.3s, z-index 0.3s, visibility 0s linear 0.3s;
 	z-index: -1;
 	border-radius: 4px;
 	background-color: var(--button-background);
@@ -14,11 +11,12 @@
 	bottom: calc(100% + 4px);
 	left: 0;
 
+	@include hidden;
+
 	&.active {
-		opacity: 1;
-		visibility: visible;
-		z-index: 3;
-		transition-delay: 0s;
+		z-index: 2;
+
+		@include active;
 	}
 
 	&__content {
